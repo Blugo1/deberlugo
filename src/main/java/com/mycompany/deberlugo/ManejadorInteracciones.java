@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class ManejadorInteracciones {
-    private Random random;
+    private final Random random;
 
     public ManejadorInteracciones() {
         random = new Random();
@@ -13,9 +13,9 @@ public class ManejadorInteracciones {
 
     public void mostrarMensajePositivo() {
         String[] mensajesPositivos = {
-            "¡Muy bien!",
-            "¡Excelente!",
-            "¡Buen trabajo!",
+            "¡Muy bien!", 
+            "¡Excelente!", 
+            "¡Buen trabajo!", 
             "¡Sigue así!"
         };
         int indiceAleatorio = random.nextInt(mensajesPositivos.length);
@@ -24,10 +24,10 @@ public class ManejadorInteracciones {
 
     public void mostrarMensajeNegativo() {
         String[] mensajesNegativos = {
-            "Inténtalo de nuevo.",
-            "No te preocupes, sigue intentando.",
-            "Casi lo tienes, inténtalo otra vez.",
-            "No es la respuesta correcta."
+            "No. Por favor intenta de nuevo.",
+            "Incorrecto. Intenta una vez más.",
+            "¡No te rindas!",
+            "No. Sigue intentando"
         };
         int indiceAleatorio = random.nextInt(mensajesNegativos.length);
         System.out.println(mensajesNegativos[indiceAleatorio]);
