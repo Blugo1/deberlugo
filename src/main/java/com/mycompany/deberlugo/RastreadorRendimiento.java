@@ -1,14 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.mycompany.deberlugo;
-
-/**
- *
- * @author LENOVO
- */
 public class RastreadorRendimiento {
+    private int aciertos;
+    private int intentos;
+
+    public RastreadorRendimiento() {
+        this.aciertos = 0;
+        this.intentos = 0;
+    }
+
+    public void registrarAcierto() {
+        aciertos++;
+        intentos++;
+    }
+
+    public void registrarFallo() {
+        intentos++;
+    }
+
+    public double calcularPorcentajeAciertos() {
+        return ((double) aciertos / (double) intentos) * 100.0;
+    }
+
+
     
 }
